@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>玉簟秋角色人格测试</title>
+  <meta name="description" content="电视剧《玉簟秋》角色人格测试，四十道题，测测你和谁最相似。" />
+  <meta name="theme-color" content="#241d18" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-serif-sc@5/400.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- 第一步：只留封面与开始按钮 -->
+  <main class="stage" id="stage-start">
+    <header class="hero" id="top">
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-moon"></span>
+        <svg class="hero-branch" viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke="currentColor" stroke-linecap="round">
+            <path d="M408 8C356 74 322 122 296 182C268 247 258 306 262 388" stroke-width="3.2" opacity=".75"/>
+            <path d="M356 92C326 108 300 101 284 76" stroke-width="2" opacity=".6"/>
+            <path d="M320 158C292 178 264 174 246 150" stroke-width="2" opacity=".6"/>
+            <path d="M296 226C266 236 244 224 234 200" stroke-width="1.8" opacity=".55"/>
+            <path d="M276 300C250 318 226 314 212 292" stroke-width="1.7" opacity=".5"/>
+            <path d="M302 128C330 146 352 136 360 112" stroke-width="1.8" opacity=".55"/>
+            <path d="M270 196C300 212 324 202 332 180" stroke-width="1.7" opacity=".5"/>
+            <path d="M258 272C288 286 310 278 318 256" stroke-width="1.6" opacity=".45"/>
+          </g>
+          <g fill="currentColor" opacity=".82">
+            <path d="M282 70c-18-4-30-16-28-32 18 2 30 14 28 32Z"/>
+            <path d="M242 144c-18-4-30-16-28-32 18 2 30 14 28 32Z" opacity=".75"/>
+            <path d="M230 194c-16-6-26-18-22-33 16 4 26 16 22 33Z" opacity=".7"/>
+            <path d="M208 286c-16-6-26-18-22-33 16 4 26 16 22 33Z" opacity=".62"/>
+            <path d="M358 106c4-18 16-30 32-28-2 18-14 30-32 28Z"/>
+            <path d="M330 174c4-18 16-30 32-28-2 18-14 30-32 28Z" opacity=".72"/>
+            <path d="M314 250c4-16 16-26 31-22-4 16-16 26-31 22Z" opacity=".62"/>
+            <path d="M408 8c-6 14-2 28 12 36 2-16-2-28-12-36Z" opacity=".9"/>
+          </g>
+        </svg>
+        <svg class="hero-hills" viewBox="0 0 1440 340" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 286L128 246L250 276L392 200L520 258L642 226L760 272L900 190L1032 250L1160 222L1284 268L1440 230V340H0V286Z" fill="#191410" opacity=".72"/>
+          <path d="M0 314L164 282L306 312L452 262L602 306L742 280L892 318L1036 272L1188 310L1330 282L1440 300V340H0V314Z" fill="#120e0b" opacity=".82"/>
+        </svg>
+      </div>
+
+      <div class="hero-inner" id="heroContent"></div>
+
+      <div class="hero-foot" aria-hidden="true">
+        <span class="hero-foot-line"></span>
+        <span class="hero-foot-text">玉簟藏离泪，半生一梦秋</span>
+        <span class="hero-foot-line"></span>
+      </div>
+    </header>
+  </main>
+
+  <!-- 第二步：答题页，只显示题目 -->
+  <main class="stage stage-paper" id="stage-quiz" hidden>
+    <div class="quiz-shell" id="quiz"></div>
+  </main>
+
+  <!-- 第三步：答完才出现的结果页 -->
+  <main class="stage stage-paper" id="stage-result" hidden>
+    <div class="quiz-shell" id="result"></div>
+  </main>
+
+  <!-- 第四步：查看更多人格档案 -->
+  <main class="stage stage-paper" id="stage-gallery" hidden>
+    <div class="quiz-shell" id="gallery"></div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data/content.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
